@@ -1,0 +1,190 @@
+html,
+html * {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+	
+header{
+	height: 65;
+	top: 75px;
+	padding-top: 25px;
+}
+body{text-align:center; 
+	 background-image: url("Images/whispyClouds1.jpg");
+	 background-color:aliceblue;}
+h1 {font-size:40px;}
+h2 {font-size:25px;}
+p {font-size:20px;}
+
+.intro{
+	width: 100%;
+	padding-top: 25px;
+	height: 180px;
+}
+.left{
+	float:left;
+	padding-left: 0px;
+	padding-right: 30px;
+	width: 400px;
+}
+.center{	
+	float: left;
+	padding: 0px;
+}
+.right{
+	float: right;
+	top: 0px;
+	padding-right: 25px;
+}
+/*#h1{font-size:25pt;
+      background-color: #e3e3fa;
+    }
+*/
+
+.purpleShadow{
+	text-shadow: 3px 1px #7813e9;
+	padding-bottom: 50px;
+}
+.blueBubble{
+    font-size: 70px;
+	color: blue;
+    text-shadow: 5px 3px white;    
+  }
+
+  .welcome{
+    font-size: 70px;
+    text-shadow: 5px 3px white;
+    text-decoration: underline;
+    background-color: lightblue;
+  }
+
+ul {
+	  background-color:aliceblue;
+	  list-style-type: none;
+	  margin: 0;
+	  padding: 25px;
+	  overflow: hidden;
+	  position: -webkit-sticky; /* Safari */
+	  position: sticky;
+	  top: 0;
+   }
+
+li {
+	float: left;
+}
+li a {
+	display: block;
+	text-align: center;
+ 	padding: 14px 16px;
+  	text-decoration: none;
+	}
+.feature{
+	font-size: 22px;
+	padding-left: 150px;
+	padding-right: 150px;
+}
+.flightSchedule{
+		  font-family: arial, sans-serif;
+		  border-collapse: collapse;
+		  width: 100%;
+		}
+
+		td, th {
+		  border: 1px solid #dddddd;
+		  text-align: left;
+		  padding: 8px;
+		}
+
+		tr:nth-child(even) {
+		  background-color: #dddddd;
+		}
+  
+  nav {
+    float: center;    
+   }
+
+/* Standard table format for the site. */
+table{
+  border: 3px solid lightblue;
+  font-size: 30px;
+  text-align: center;
+  margin: 0 auto;
+  display:flex;
+  justify-content: center;
+}
+ #pricingTd{
+   border: 3px solid lightblue;
+ }
+
+/* 4 different link states. */
+a:link {
+  font-size: 30px;
+  color:blue;
+}
+a:visited {
+  font-size: 30px;
+  color:#7813e9;
+}
+a:hover {
+  font-size: 30px;
+  color:#E51452;
+}   /* mouse over link */
+a:active {
+  font-size: 30px;
+  color:#9a0ca0;
+}  /* selected link */
+
+/* Two divisions to create a top banner with background image and text. */
+/* Outer division with background image. 
+#div1 {
+  background-size: contain;
+ /* background-image: url('lakeview.jpg');
+  padding-left: 300px;
+  padding-right: 300px;
+  padding-top: 100px;
+  padding-bottom: 100px;
+
+}
+/* Inner division with text. */
+/*#div2 {
+  /*align-content: center;*/
+ /*Most recently used - background-color: aliceblue; */
+    /*text-align: center;*/
+  /* Most recently used - width: 625px;*/
+
+  /*padding: 20px;*/
+ /* Most recently used -  margin: 0 auto; */
+  /*display:flex;
+  align-items: center;
+  justify-content: center;*/
+/*} */
+
+/*Division for the pricing table on, About Us, page.
+#div3 {
+  text-align: center;
+  margin: 0 auto;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Paragraph divisions on Features Page. 
+#outerdiv {
+  background-color: lightblue;
+  border-left: 10px groove lightblue;
+  border-right: 10px groove lightblue;
+  margin: 20px;
+}
+#innerdiv {
+  background-color: aliceblue;
+  text-align: center;
+  width: 350px;
+  border: 25px groove lightblue;
+  padding: 20px;
+  margin: 0 auto;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+*/

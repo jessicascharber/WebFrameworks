@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Find and Delete a Record</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+			<link rel="stylesheet" type="text/css" href="adventureAirlines.css"/>
+		<meta charset="utf-8">
+	</head>
+	<body>
+		<header>
+			<nav>	
+				<ul>
+					<li><a href="index.html">Main</a></li> &nbsp;
+					<li><a href="listing.html">Airline Schedule</a></li> &nbsp;
+					<li><a href="entry.html">Schedule a Flight</a></li> &nbsp;
+					<li><a href="update.html">Update a Flight</a></li> &nbsp;
+					<li><a href="deletion.html">Cancel a Flight</a></li> &nbsp;
+				</ul>
+			</nav>
+		</header>
+		 <div class="intro">
+	 		<column class="left">
+				<img src="Images/airplane3.jpg" alt="Airplane3" width= "300" height= "100">
+			</column>
+		 	<column class="center">
+				<h1 class="blueBubble">Air Adventures</h1>
+		    </column>
+			<column class="right">
+				<img src="Images/airplane1.jpg" alt="Airplane1" width= "300" height= "100">	 
+		 	</column>
+	 	</div>	  
+	 <div>		 
+    	<h1 class="purpleShadow">Where your vacation begins!</h1>
+	  </div>		   	
+    	
+	<!--<div id="page" data-role="page" data-theme="b" > 
+		<div data-role="header" data-theme="b">
+			<h1>Find a Record to Delete</h1>	
+		</div>
+		
+	<!--			
+	<?php
+	include 'mod2_config_sampledb.php';
+	include 'mod2_opendb.php';
+
+               $id= (isset($_POST['id'])    ? $_POST['id']   : '');
+
+$sql= "	SELECT id, fname, lname, address, city, state, zip from customers WHERE id = $id LIMIT 1";
+
+$result = mysqli_query($conn, $sql);
+
+
+if (mysqli_num_rows($result) > 0) {
+    // output data of each row
+    while($row = mysqli_fetch_assoc($result)) {
+				echo "<b>Record successfully found:</b><br>";
+				echo "<b>ID: " . $row["id"]. "</b><br>";
+        echo "<b>Name: " . $row["fname"]. " " . $row["lname"]. "</b><br>";
+				echo "<b>Address: " . $row["address"]. "</b><br>";
+				echo "<b>City: " . $row["city"]. "</b><br>";
+				echo "<b>State: " . $row["state"]. "</b><br>";
+				echo "<b>Zip: " . $row["zip"]. "</b><br><hr>";
+				echo "<br><b>Record successfully DELETED!</b><br>";
+
+    }
+} else {
+    echo "Sorry there are no matches! Please check your entry and try again.";
+}
+
+$sql= "	DELETE FROM customers WHERE id = $id";
+
+$result = mysqli_query($conn, $sql);
+
+mysqli_close($conn);
+
+?>
+-->
+<!--		
+<p>Click the button to remove the first row in the table.</p>
+
+<table id="flightSchedule">
+  <tr>
+    <td>cell 1</td>
+    <td>cell 2</td>
+  </tr>
+  <tr>
+    <td>cell 3</td>
+    <td>cell 4</td>
+  </tr>
+</table>
+<br> 
+
+<button onclick="myFunction()">Delete</button>
+
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+  var txt;
+  var r = confirm("Are you sure you want to delete this record?");
+  if (r == true) { 
+	  txt = "Record Deleted"; 
+	  {
+	  document.getElementById("flightSchedule").deleteRow(0);
+     }
+    
+  } else {
+    txt = "You pressed Cancel!";
+  }
+  document.getElementById("demo").innerHTML = txt;
+}
+</script>
+-->
+<h2>Delete a Record</h2>
+
+	<table id= "flightSchedule">
+	  <tr>
+		<th>Flight Number</th>
+		<th>Departing From</th>
+		<th>Departing Time</th>
+		<th>Arriving To</th>
+		<th>Arrival Time</th>
+	  </tr>
+	  <tr>
+		<td>238</td>
+		<td>Minnesota</td>
+		<td>7:30pm</td>
+		<td>Florida</td>
+		<td>10:30pm</td>
+		   <td><input type="button" value="Delete" onclick="myFunction()"></td>
+	  </tr>
+	  <tr>
+		<td>238</td>
+		<td>Minnesota</td>
+		<td>7:30pm</td>
+		<td>Florida</td>
+		<td>10:30pm</td>
+		   <td><input type="button" value="Delete" onclick="myFunction()"></td>
+	  </tr>
+	  <tr>
+		<td>238</td>
+		<td>Minnesota</td>
+		<td>7:30pm</td>
+		<td>Florida</td>
+		<td>10:30pm</td>
+		  <td><input type="button" value="Delete" onclick="myFunction()"></td>
+	  </tr>
+	  <tr>
+		<td>238</td>
+		<td>Minnesota</td>
+		<td>7:30pm</td>
+		<td>Florida</td>
+		<td>10:30pm</td>
+		  <td><input type="button" value="Delete" onclick="myFunction()"></td>
+	  </tr>
+	  <tr>
+		<td>238</td>
+		<td>Minnesota</td>
+		<td>7:30pm</td>
+		<td>Florida</td>
+		<td>10:30pm</td>
+		  <td><input type="button" value="Delete" onclick="myFunction()"></td>
+	  </tr>
+	  <tr>
+		<td>238</td>
+		<td>Minnesota</td>
+		<td>7:30pm</td>
+		<td>Florida</td>
+		<td>10:30pm</td>
+		  <td><input type="button" value="Delete" onclick="myFunction()"></td>
+	  </tr>
+	</table>
+	<script>
+		function myFunction() {
+	  var txt;
+	  var r = confirm("Are you sure you want to delete this record?");
+	  if (r == true) { 
+		  txt = "Record Deleted"; 
+		  {
+		  document.getElementById("flightSchedule").deleteRow(r);
+		 }
+
+	  } else {
+		txt = "You pressed Cancel!";
+	  }
+	  document.getElementById("demo").innerHTML = txt;
+	}
+
+		function deleteRow(r) {
+			var i = r.parentNode.parentNode.rowIndex;
+			document.getElementById("flightSchedule").deleteRow(i);
+		}
+	</script>
+	<div data-role="footer" data-theme="b">
+	  <h4>Airline Adventures &copy; 2019</h4>
+	</div>
+	
+	</body>
+</html>
