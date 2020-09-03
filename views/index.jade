@@ -1,0 +1,65 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title} 
+  doctype html
+  html
+    head
+      link(rel='stylesheet', type='text/css', href='style.css')
+      |     
+      meta(charset='utf-8')
+      |     
+      title Main Page
+    |   
+    body
+      header
+        ul
+          nav
+            li
+              a(href='/') Main
+            |  &nbsp;
+            | &#x9;&#x9;&#x9;&#x9;
+            li
+              a(href='/listing') Airline Schedule
+            |  &nbsp;
+            | &#x9;&#x9;&#x9;&#x9;
+            li
+              a(href='/entry') Schedule a Flight
+            |  &nbsp;
+            | &#x9;&#x9;&#x9;&#x9;
+            li
+              a(href='/update') Update a Flight
+            |  &nbsp;
+            | &#x9;&#x9;&#x9;&#x9;
+            li
+              a(href='/deletion') Cancel a Flight
+              | &#x9;  
+              | &#x9; 
+      .intro
+        column.left
+          img(src='Images/airplane3.jpg', alt='Airplane3', width='300', height='100')
+        | &#x9;&#x9; &#x9;
+        column.center
+          h1.blueBubble Air Adventures
+        | &#x9;&#x9;&#x9;
+        column.right
+          img(src='Images/airplane1.jpg', alt='Airplane1', width='300', height='100')
+      | &#x9;  
+      | &#x9; 
+      div
+        h1.purpleShadow Where your vacation begins!
+      | &#x9;&#x9;
+      |      
+      p.feature
+        | A vacation cabin in the air!
+        | We offer reclining chairs, free media options and complimentary food and beverages. Come fly in the peaceful luxury of your own cabin. The vacation starts now!
+        br
+        | Easy online scheduling available right from our website. 
+        br
+        |  Make your reservation before it&apos;s too late, seats are selling fast!
+      |   
+      |   
+      footer
+        small
+          i Copyright &copy; 2019 Jessica Scharber

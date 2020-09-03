@@ -1,0 +1,12 @@
+html
+    title= title
+    body
+      form(method='post',action='/saveIt')
+        fieldset
+          legend Add a new friend
+          div.clearfix
+            label Friend
+            div.input
+              input(name='fname',class='xlarge')
+          div.actions
+            input(type='submit',value='Save',class='btn primary')

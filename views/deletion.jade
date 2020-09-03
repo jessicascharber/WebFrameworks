@@ -1,0 +1,131 @@
+extends layout
+
+block content
+  
+  doctype html
+  html
+    head
+      title Find and Delete a Record
+      | &#x9;&#x9;
+      meta(name='viewport', content='width=device-width, initial-scale=1')
+      | &#x9;&#x9;&#x9;
+      link(rel='stylesheet', type='text/css', href='style.css')
+      | &#x9;&#x9;
+      meta(charset='utf-8')
+      | &#x9;
+    body
+      header
+        nav
+          ul
+            li
+              a(href='/') Main
+            |  &nbsp;
+            | &#x9;&#x9;&#x9;&#x9;&#x9;
+            li
+              a(href='/listing') Airline Schedule
+            |  &nbsp;
+            | &#x9;&#x9;&#x9;&#x9;&#x9;
+            li
+              a(href='/entry') Schedule a Flight
+            |  &nbsp;
+            | &#x9;&#x9;&#x9;&#x9;&#x9;
+            li
+              a(href='/update') Update a Flight
+            |  &nbsp;
+            | &#x9;&#x9;&#x9;&#x9;&#x9;
+            li
+              a(href='/deletion') Cancel a Flight
+              | &#x9;&#x9; 
+      .intro
+        column.left
+          img(src='Images/airplane3.jpg', alt='Airplane3', width='300', height='100')
+          | &#x9;&#x9; &#x9;
+        column.center
+          h1.blueBubble Air Adventures
+          | &#x9;&#x9;&#x9;
+        column.right
+          img(src='Images/airplane1.jpg', alt='Airplane1', width='300', height='100')
+          | &#x9;  
+          | &#x9; 
+      div
+        h1.purpleShadow Where your vacation begins!
+        html
+    head
+    body
+      h2 Delete a Record
+      table#flightSchedule
+        tbody
+          tr
+            th Flight Number
+            th Departing From
+            th Departing Time
+            th Arriving To
+            th Arrival Time
+          tr
+            td 238
+            td Minnesota
+            td 7:30pm
+            td Florida
+            td 10:30pm
+            td
+              input(type='button', value='Delete', onclick='myFunction()')
+          tr
+            td 238
+            td Minnesota
+            td 7:30pm
+            td Florida
+            td 10:30pm
+            td
+              input(type='button', value='Delete', onclick='myFunction()')
+          tr
+            td 238
+            td Minnesota
+            td 7:30pm
+            td Florida
+            td 10:30pm
+            td
+              input(type='button', value='Delete', onclick='myFunction()')
+          tr
+            td 238
+            td Minnesota
+            td 7:30pm
+            td Florida
+            td 10:30pm
+            td
+              input(type='button', value='Delete', onclick='myFunction()')
+          tr
+            td 238
+            td Minnesota
+            td 7:30pm
+            td Florida
+            td 10:30pm
+            td
+              input(type='button', value='Delete', onclick='myFunction()')
+          tr
+            td 238
+            td Minnesota
+            td 7:30pm
+            td Florida
+            td 10:30pm
+            td
+              input(type='button', value='Delete', onclick='myFunction()')
+      script.
+        function myFunction() {
+        var txt;
+        var r = confirm("Are you sure you want to delete this record?");
+        if (r == true) {
+        txt = "Record Deleted";
+        {
+        document.getElementById("flightSchedule").deleteRow(r);
+        }
+        } else {
+        txt = "You pressed Cancel!";
+        }
+        document.getElementById("demo").innerHTML = txt;
+        }
+        function deleteRow(r) {
+        var i = r.parentNode.parentNode.rowIndex;
+        document.getElementById("flightSchedule").deleteRow(i);
+        }
+      div(data-role='footer', data-theme='b')
+        h4 Airline Adventures © 2019

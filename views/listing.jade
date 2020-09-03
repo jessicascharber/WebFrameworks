@@ -1,0 +1,157 @@
+extends layout
+
+block content
+ 
+  doctype html
+  html
+    head
+      link(rel='stylesheet', type='text/css', href='style.css')
+      | &#x9;&#x9;
+      meta(charset='utf-8')
+      | &#x9;&#x9;
+      title Listing Page
+      | &#x9;
+    body
+      header
+        nav
+          ul
+            li
+              a(href='/') Main
+              |  &nbsp;
+              | &#x9;&#x9;&#x9;&#x9;&#x9;
+            li
+              a(href='/listing') Airline Schedule
+              |  &nbsp;
+              | &#x9;&#x9;&#x9;&#x9;&#x9;
+            li
+              a(href='/entry') Schedule a Flight
+              |  &nbsp;
+              | &#x9;&#x9;&#x9;&#x9;&#x9;
+            li
+              a(href='/update') Update a Flight
+              |  &nbsp;
+              | &#x9;&#x9;&#x9;&#x9;&#x9;
+            li
+              a(href='/deletion') Cancel a Flight
+              | &#x9;&#x9;
+              | &#x9; &#x9;   &#x9;&#x9;       
+              |  
+    .intro
+      column.left
+        img(src='Images/airplane3.jpg', alt='Airplane3', width='300', height='100')
+      | &#x9;&#x9; &#x9;
+      column.center
+        h1.blueBubble Air Adventures
+      | &#x9;&#x9;&#x9;
+      column.right
+        img(src='Images/airplane1.jpg', alt='Airplane1', width='300', height='100')
+    | &#x9;  
+    | &#x9; 
+    div
+      h1.purpleShadow Where your vacation begins!
+    | &#x9;&#x9;
+    | &#x9;&#x9;
+    section
+      h2 Flight Schedule
+      | &#x9;&#x9;&#x9;
+      table#flightSchedule
+        tbody
+          tr
+            th Flight Number
+            | &#x9;&#x9;&#x9;&#x9;
+            th Departing From
+            | &#x9;&#x9;&#x9;&#x9;
+            th Departing Time
+            | &#x9;&#x9;&#x9;&#x9;
+            th Arriving To
+            | &#x9;&#x9;&#x9;&#x9;
+            th Arrival Time
+          | &#x9;&#x9;&#x9;  
+          tr
+            td 238
+            | &#x9;&#x9;&#x9;&#x9;
+            td Minnesota
+            | &#x9;&#x9;&#x9;&#x9;
+            td 7:30pm
+            | &#x9;&#x9;&#x9;&#x9;
+            td Florida
+            | &#x9;&#x9;&#x9;&#x9;
+            td 12:30am
+          | &#x9;&#x9;&#x9;  
+          tr
+            td 080
+            | &#x9;&#x9;&#x9;&#x9;
+            td Minnesota
+            | &#x9;&#x9;&#x9;&#x9;
+            td 10:30pm
+            | &#x9;&#x9;&#x9;&#x9;
+            td Texas
+            | &#x9;&#x9;&#x9;&#x9;
+            td 2:30am
+          | &#x9;&#x9;&#x9;  
+          tr
+            td 688
+            | &#x9;&#x9;&#x9;&#x9;
+            td Minnesota
+            | &#x9;&#x9;&#x9;&#x9;
+            td 6:30pm
+            | &#x9;&#x9;&#x9;&#x9;
+            td Louisiana
+            | &#x9;&#x9;&#x9;&#x9;
+            td 11:30pm
+          | &#x9;&#x9;&#x9;  
+          tr
+            td 758
+            | &#x9;&#x9;&#x9;&#x9;
+            td Minnesota
+            | &#x9;&#x9;&#x9;&#x9;
+            td 3:15pm
+            | &#x9;&#x9;&#x9;&#x9;
+            td South Carolina
+            | &#x9;&#x9;&#x9;&#x9;
+            td 9:45pm
+          | &#x9;&#x9;&#x9;  
+          tr
+            td 967
+            | &#x9;&#x9;&#x9;&#x9;
+            td Minnesota
+            | &#x9;&#x9;&#x9;&#x9;
+            td 9:15pm
+            | &#x9;&#x9;&#x9;&#x9;
+            td California
+            | &#x9;&#x9;&#x9;&#x9;
+            td 2:30am
+          | &#x9;&#x9;&#x9;  
+          tr
+            td 238
+            | &#x9;&#x9;&#x9;&#x9;
+            td Minnesota
+            | &#x9;&#x9;&#x9;&#x9;
+            td 7:30pm
+            | &#x9;&#x9;&#x9;&#x9;
+            td Florida
+            | &#x9;&#x9;&#x9;&#x9;
+            td 10:30pm
+    #page(data-role='page', data-theme='b')
+      div(data-role='header', data-theme='b')
+        h1 Locate Your Flight Schedule
+    | &#x9;
+    | &#x9;&#x9;
+    div(data-role='content')
+      form(method='post', action='listing.php')
+        table(width='400', border='0', cellspacing='1', cellpadding='2')
+          tbody
+            tr
+              td(width='100') Flight Number
+              |                         
+              td
+                input#flightNumber(name='flightNumber', type='text', required='', oninvalid="this.setCustomValidity('You must enter a flight number.')", onchange="this.setCustomValidity('')")
+            |                      
+            tr
+              td(width='100')  
+              |                         
+              td
+                input#add(name='find', type='submit', value='Find a Record')
+    | &#x9;&#x9;&#x9;&#x9;
+    div(data-role='footer', data-theme='b')
+      h4 Air Adventures &copy; 2019

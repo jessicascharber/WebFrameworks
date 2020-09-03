@@ -1,0 +1,99 @@
+extends layout
+
+block content
+
+  doctype html
+  html
+    head
+      title Entry Page
+      | &#x9;&#x9;&#x9;
+      | &#x9; &#x9;
+      link(rel='stylesheet', type='text/css', href='adventureAirlines.css')
+      | &#x9;&#x9;
+      link(rel='stylesheet', href='css/screen.css')
+      | &#x9;&#x9;
+      link(rel='stylesheet', href='css/styles.css')
+      | &#x9; &#x9;
+      script(src='http://code.jquery.com/jquery-2.1.1.min.js')
+      | &#x9;&#x9;
+      script(src='js/jquery.validate.js')
+    | &#x9;
+    body
+      header
+        nav
+          ul
+            li
+              a(href='/index') Main
+            |  &nbsp;
+            | &#x9;&#x9;&#x9;&#x9;
+            li
+              a(href='/listing') Airline Schedule
+            |  &nbsp;
+            | &#x9;&#x9;&#x9;&#x9;
+            li
+              a(href='/entry') Schedule a Flight
+            |  &nbsp;
+            | &#x9;&#x9;&#x9;&#x9;
+            li
+              a(href='/update') Update a Flight
+            |  &nbsp;
+            | &#x9;&#x9;&#x9;&#x9;
+            li
+              a(href='/deletion') Cancel a Flight
+      | &#x9;&#x9;
+      | &#x9; 
+      .intro
+        column.left
+          img(src='Images/airplane3.jpg', alt='Airplane3', width='300', height='100')
+        | &#x9;&#x9; &#x9;
+        column.center
+          h1.blueBubble Air Adventures
+        | &#x9;&#x9;&#x9;
+        column.right
+          img(src='Images/airplane1.jpg', alt='Airplane1', width='300', height='100')
+      | &#x9;  
+      | &#x9; 
+      div
+        h1.purpleShadow Where your vacation begins!
+      | &#x9;&#x9;   &#x9;
+      |     &#x9;
+      | &#x9;
+      div(data-role='header', data-theme='b')
+        h2 Insert a Flight Record
+      | &#x9;&#x9;
+      | &#x9;
+      div(data-role='content')
+        form#entryForm.cmxform(method='get', action='form-handler.html', autocomplete='on')
+          fieldset
+            legend Flight Data (all fields required)
+            | &#x9;&#x9;&#x9; 
+            p
+              label(for='fNumber') Flight Number
+              | &#x9;&#x9;&#x9;&#x9;
+              input#fNumber(flightnumber='flightNumber', minlength='3', maxlength='3', type='number', required='')
+            | &#x9;&#x9;&#x9;&#x9;
+            p
+              label(for='departFrom') Departing From
+              | &#x9;&#x9;&#x9;&#x9;
+              input#departFrom(departingfrom='departingFrom', type='text', required='')
+            | &#x9;&#x9;&#x9;&#x9;
+            p
+              label(for='departTime') Departure Time
+              | &#x9;&#x9;&#x9;&#x9;
+              input#departTime(departuretime='departureTime', type='time', required='')
+            | &#x9;&#x9;&#x9;&#x9;
+            p
+              label(for='arrivingTo') Arriving To
+              | &#x9;&#x9;&#x9;&#x9;
+              input#arrivingTo(arrivingto='arrivingTo', type='text', required='')
+            | &#x9;&#x9;&#x9;&#x9;
+            p
+              label(for='arrivalTime') Arrival Time
+              | &#x9;&#x9;&#x9;&#x9;
+              input#arrivalTime(arrivaltime='arrivalTime', type='time', required='')
+            | &#x9;&#x9;&#x9; 
+            p
+              input.submit(type='submit', value='Submit')
+        | &#x9;&#x9; 
+        script.
+          $("entryForm").validate();
